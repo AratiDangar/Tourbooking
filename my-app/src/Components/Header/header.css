@@ -22,10 +22,12 @@
     color: var(--heading-color);
     font-weight: 500;
     font-size: 1.3rem;
+    transition: all 0.25s;
 }
 
 .nav_items a:hover{
     color: rgb(158, 173, 162);
+    font-size: 1.5em
 }
 
 .nav_items a.active_link{
@@ -81,6 +83,9 @@
     justify-content: center;
     line-height: 0.5rem;
     z-index: 9999;
+    transition: all 1s;
+    -webkit-transition: all 0.25s;
+ 
 }
 .show_menu{
     display:block;

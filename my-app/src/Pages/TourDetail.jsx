@@ -85,7 +85,7 @@ try {
   if(!res.ok) {
     return alert(result.message)}
 
-  alert('review submitted')
+  alert(result.message)
   
 } catch (err) {
   alert(err.message);

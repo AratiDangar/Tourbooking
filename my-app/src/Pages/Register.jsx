@@ -11,7 +11,7 @@ import userIcon from '../assets/images/registration.png'
 const Register = () => {
 
   const [credentials,setCredentials]=useState({
-    userName:'',
+    username:'',
     email:'',
     password:''
   
@@ -30,15 +30,17 @@ const navigate=useNavigate()
          
 
          try {
+          console.log(credentials)
           const res=await fetch(`${BASE_URL}/auth/register`,{
-            method:'POST',
+            method:'post',
             headers:{
-              'Content-type':'application/json'
+              'content-type':'application/json'
             },
             body:JSON.stringify(credentials)
           })
-          console.log(credentials.userName)
+          
           const result=await res.json()
+          console.log(credentials.username)
           if(!res.ok) alert(result.message)
 
           dispatch({type:'REGISTER_SUCCESS'})
@@ -65,7 +67,7 @@ const navigate=useNavigate()
           Registration
         </h2>
         <Form onSubmit={handleClick}>
-          <FormGroup><input onChange={handleChange} required type="text" placeholder='Enter your Name'value={credentials.userName} id='userName' /></FormGroup>
+          <FormGroup><input onChange={handleChange} required type="text" placeholder='Enter your Name'value={credentials.userName} id='username' /></FormGroup>
           <FormGroup><input onChange={handleChange} required type="email" placeholder='Email address' value={credentials.email} id='email'/></FormGroup>
           <FormGroup><input onChange={handleChange} required type="password" placeholder='Enter password' value={credentials.password}  id='password' /></FormGroup>
           

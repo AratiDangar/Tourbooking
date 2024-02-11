@@ -31,11 +31,29 @@ const Testimonial = () => {
                 slidesToScroll:1,
             },
         },
+        
+         {
+           breakpoint: 600,
+           settings: {
+             slidesToShow: 2,
+             slidesToScroll: 2,
+             initialSlide: 2
+           }
+         },
+         {
+           breakpoint: 480,
+           settings: {
+             slidesToShow: 1,
+             slidesToScroll: 1
+           }
+         },
+         
+       
         ]
 
     }
   return <Slider {...settings}>
-    <div className="testimonial py-4 px-3">
+    <div className="testimonial py-4 px-3 ">
      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos molestias deserunt quaerat accusamus adipisci cum cupiditate quo! Doloribus modi sit accusantium soluta mollitia ex culpa nemo nobis aliquid voluptas?
      </p>
