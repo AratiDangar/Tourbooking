@@ -58,7 +58,7 @@ export const login = async (req, res) => {
     const token = jwt.sign(payload, secretKey, { expiresIn: "15d" });
 
     //set the token into the browser token and send the response to client
-        console.log(token)
+        
     res
       .cookie("accessToken", token, {
         httpOnly: true,
