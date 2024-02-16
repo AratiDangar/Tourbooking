@@ -49,7 +49,7 @@ const connect=async()=>{
 
 
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors(corsOptions));
 app.use(cookieParser());
 
 
