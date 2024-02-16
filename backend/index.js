@@ -18,13 +18,29 @@ dotenv.config();
 const app=express();
 app.use(express.json());
 const port=process.env.PORT 
+const allowCredentials = (origin) => {
+    // Add your logic here to determine if the request origin is allowed
+    return origin === 'https://celebrated-medovik-8253c1.netlify.app';
+  };
+  
+  // CORS configuration
+  const corsOptions = {
+    origin: (origin, callback) => {
+      if (!origin || allowCredentials(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true
+  };
+  
+/*const corsOptions={
 
-const corsOptions={
-
-    origin:"https://celebrated-medovik-8253c1.netlify.app",
+    origin:"",
     Credential:true,
     optionsSuccessStatus: 200
-}
+}*/
 
 
 //database connection
