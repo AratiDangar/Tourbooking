@@ -34,13 +34,15 @@ const handleClick=async e=>{
             },
             credentials:'include',
             body:JSON.stringify(credentials)
+            
           })
 
           const result=await res.json()
           if(!res.ok) alert(result.message)
          console.log(credentials.email)
          dispatch({type:'LOGIN_SUCCESS',payload:result.data})
-         navigate('/')
+        
+   navigate('/')
           
          } catch (err) {
           dispatch({type:'LOGIN_FAILURE',payload:err.message})

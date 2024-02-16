@@ -76,6 +76,7 @@ try {
     method:'post',
     headers:{
       "content-type":"application/json",
+   
     },
     credentials:'include',
     body:JSON.stringify(reviewObj),
