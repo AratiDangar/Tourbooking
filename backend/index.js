@@ -20,7 +20,7 @@ app.use(express.json());
 const port=process.env.PORT 
 const allowCredentials = (origin) => {
     // Add your logic here to determine if the request origin is allowed
-    return origin === 'https://celebrated-medovik-8253c1.netlify.app';
+    return origin === 'https://trekthetrip.netlify.app';
   };
   
   // CORS configuration
