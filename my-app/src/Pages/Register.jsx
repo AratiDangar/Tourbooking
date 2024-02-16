@@ -30,7 +30,7 @@ const navigate=useNavigate()
          
 
          try {
-          console.log(credentials)
+          
           const res=await fetch(`${BASE_URL}/auth/register`,{
             method:'post',
             headers:{
@@ -40,7 +40,7 @@ const navigate=useNavigate()
           })
           
           const result=await res.json()
-          console.log(credentials.username)
+        
           if(!res.ok) alert(result.message)
 
           dispatch({type:'REGISTER_SUCCESS'})
