@@ -21,8 +21,9 @@ const port=process.env.PORT
 
 const corsOptions={
 
-    origin:true,
-    Credential:true
+    origin:"https://mernbackend-hu9p.onrender.com",
+    Credential:true,
+    optionsSuccessStatus: 200
 }
 
 
