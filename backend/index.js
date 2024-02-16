@@ -21,7 +21,7 @@ const port=process.env.PORT
 
 const corsOptions={
 
-    origin:"https://mernbackend-hu9p.onrender.com",
+    origin:"https://celebrated-medovik-8253c1.netlify.app",
     Credential:true,
     optionsSuccessStatus: 200
 }
